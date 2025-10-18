@@ -20,8 +20,8 @@ foreign key (BookID) references Books(BookID)
 );
 
 -- add unique constraints to ISBN column
-alter table books
-add constraint uq_Books_ISBN unique (ISBN);
+alter table Books
+add uq_Books_ISBN varchar(50) unique;
 
 -- delete specific rows
 delete from Orders
